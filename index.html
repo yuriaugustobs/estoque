@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A web-based stock management system that helps track product inventory and generate reports">
+    <meta name="keywords" content="stock management, inventory system, product tracking, stock control">
+    <meta property="og:title" content="Stock Management System">
+    <meta property="og:description" content="A web-based stock management system that helps track product inventory and generate reports">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Stock Management System">
+    <meta name="twitter:description" content="A web-based stock management system that helps track product inventory and generate reports">
+    <title>Stock Management System</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="styles/main.css" rel="stylesheet">
+    <link href="styles/modal.css" rel="stylesheet">
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel" src="components/Header.js"></script>
+    <script type="text/babel" src="components/ProductList.js"></script>
+    <script type="text/babel" src="components/ProductModal.js"></script>
+    <script type="text/babel" src="components/FloatingButton.js"></script>
+    <script type="text/babel" src="utils/storage.js"></script>
+    <script type="text/babel" src="utils/pdfGenerator.js"></script>
+    <script type="text/babel" src="app.js"></script>
+</body>
+</html>
