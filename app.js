@@ -5,18 +5,7 @@ function App() {
 
     React.useEffect(() => {
         try {
-            const predefinedProducts = [
-                { id: "99401049", name: "Adesivo Plastico PVC", price: 0.00, unit: "un", idealQuantity: 1, minimumQuantity: 1, currentQuantity: 0 },
-                { id: "99401050", name: "Adesivo PVC 90 KI KISAFIX 700g", price: 0.00, unit: "un", idealQuantity: 1, minimumQuantity: 1, currentQuantity: 0 },
-                { id: "99401051", name: "Agua Destilada", price: 0.00, unit: "VIDRO", idealQuantity: 1, minimumQuantity: 1, currentQuantity: 0 },
-                { id: "99401054", name: "Arame de Solda", price: 0.00, unit: "1Kg", idealQuantity: 1, minimumQuantity: 1, currentQuantity: 0 },
-                { id: "99401055", name: "Arame GALVANIZADO rolo", price: 0.00, unit: "un", idealQuantity: 1, minimumQuantity: 1, currentQuantity: 0 },
-                { id: "99401056", name: "Barbante p/ Banner", price: 0.00, unit: "un", idealQuantity: 2, minimumQuantity: 1, currentQuantity: 0 },
-                { id: "99401057", name: "Bastão Madeira 16mm 5/8 - 105CM", price: 0.00, unit: "un", idealQuantity: 1, minimumQuantity: 1, currentQuantity: 0 },
-                // Adicione mais itens da lista conforme necessário
-            ];
-
-            setProducts(predefinedProducts);
+            setProducts(getProducts());
         } catch (error) {
             reportError(error);
         }
@@ -60,7 +49,7 @@ function App() {
         try {
             const product = products.find(p => p.id === productId);
             if (product) {
-                updateProduct({ ...product, currentQuantity: newQuantity });
+                updateProduct({ ...product, quantidadeAtual: newQuantity });
                 setProducts(getProducts());
             }
         } catch (error) {
